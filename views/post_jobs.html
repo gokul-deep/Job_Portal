@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../style/post_jobs.css">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend+Exa:wght@400;800;900&family=Merienda:wght@500;600;700&family=Norican&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- fontawesome js -->
+    <script src="https://kit.fontawesome.com/e1ee03ca03.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet"
+        href="https://www.futuremug.co.in/resources/assets/homedesign-old/css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css"> -->
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container d-flex justify-content-between">
+            <img src="../images/logo-white2.png" alt="Bootstrap" width="120px" height="auto">
+            
+            <div class="dropdown">
+                <button class="btn btn-link" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-circle-user"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="../service/logout.php">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <h2 class="text-center mt-4"><u>POST JOBS HERE</u></h2>
+
+
+    <!-- banner -->
+    <div class="container-fluid content mb-5">
+        <div class="row mx-3">
+            <div class="col-lg-3 md-12 left-side text-center">
+                <div class="d-flex flex-column align-items-center justify-content-center left-div shadow">
+                    <!-- <img src="./images/attachment_74499023.png" alt="" style="border-radius: 50%; width: 200px;"> -->
+                    <div class="circle">
+                        <img class="profile-pic"
+                            src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg">
+
+                    </div>
+                    <div class="p-image">
+                        <i class="fa fa-camera upload-button"></i>
+                        <input class="file-upload" type="file" accept="image/*" />
+                    </div>
+
+                    <h4 class="mt-4 text-secondary">Company Name</h4>
+
+                </div>
+                <div class="d-flex justify-content-center my-3 mx-auto" id="success"></div>
+            </div>
+
+            <div class="col-lg-9 md-12 right-side ms-auto px-5">
+
+                <form id="form" class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Job Title *</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>No of Vacancies *</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input name="job_title" class="form-control" type="text" placeholder="Job Title"
+                                aria-label="Job Title">
+                        </div>
+                        <div class="col-lg-6">
+                            <input name="vacancies" class="form-control" type="number" placeholder="No of Vacancies"
+                                aria-label="No of Vacancies">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <p>Location *</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Salary in CTC (Lakhs) *</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input name="location" class="form-control" type="text" placeholder="Location"
+                                aria-label="Location">
+                        </div>
+                        <div class="col-lg-6">
+                            <input name="salary" class="form-control" type="number" placeholder="Salary in CTC"
+                                aria-label="Salary in CTC">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <p>Skills *</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Experience (Years) *</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input name="skills" class="form-control" type="text" placeholder="Skills"
+                                aria-label="Skills">
+                        </div>
+                        <div class="col-lg-6">
+                            <input name="experience" class="form-control" type="number" placeholder="Experience"
+                                aria-label="Experience">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <p>Job Description *</p>
+                            <div class="col-lg-12">
+                                <textarea name="description" class="form-control" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="col-lg-12">
+                                <p>Company Name *</p>
+                                <div class="col-lg-12">
+                                    <input name="company" class="form-control" type="text" placeholder="Company"
+                                        aria-label="Company">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 ms-auto d-flex align-items-end justify-content-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-request my-3" id="post_job">Post Job</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../script/post_jobs.js"></script>
+    <script src="https://kit.fontawesome.com/e1ee03ca03.js" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>

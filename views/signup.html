@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="../style/signup.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e1ee03ca03.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- navbar -->
+    <!-- <nav class="navbar">
+        <div class="container d-flex justify-content-between">
+            <img src="./images/logo-white2.png" alt="Bootstrap" width="120px" height="auto">
+            <a href="">Sign in</a>
+        </div>
+    </nav> -->
+
+    <!-- content -->
+    <div class="container right-panel-active">
+        <!-- Sign Up -->
+        <!-- <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Sign Up</h2>
+                <input type="text" placeholder="User" class="input" />
+                <input type="email" placeholder="Email" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <button class="btn">Sign Up</button>
+            </form>
+        </div> -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Employer Signup</h2>
+                <input type="text" name="company_name" placeholder="Company Name" class="input" />
+                <input type="text" name="company_location" placeholder="Company Location" class="input" />
+                <input type="email" name="email" placeholder="Email" class="input" />
+                <input type="password" name="password" placeholder="Password" class="input" />
+                <input type="password" name="password2" placeholder="Re-enter Password" class="input" />
+                <button class="btn" type="button" name="signup" id="signup-employer">Sign up</button>
+                <div id="success"></div>
+            </form>
+        </div>
+
+        <!-- Sign Up -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <h2 class="form__title">Candidate Signup</h2>
+                <input type="text" name="name" placeholder="Name" class="input" />
+                <input type="text" name="location" placeholder="Location" class="input" />
+                <input type="email" name="email" placeholder="Email" class="input" />
+                <input type="password" name="password" placeholder="Password" class="input" />
+                <input type="password" name="password2" placeholder="Re-enter Password" class="input" />
+                <button class="btn" type="button" name="signup" id="signup-candidate">Sign up</button>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left d-flex flex-column justify-content-evenly">
+                    <h4>Already Have An Account?<br><a href="../views/login.html">Login</a></h4>
+
+                    <button class="btn" id="signIn">Candidate Signup</button>
+                </div>
+                <div class="overlay__panel overlay--right d-flex flex-column justify-content-evenly">
+                    <h4>Already Have An Account?<br><a href="../views/login.html">Login</a></h4>
+
+                    <button class="btn" name="signup" id="signUp">Employer Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    const fistForm = document.getElementById("form1");
+    const secondForm = document.getElementById("form2");
+    const container = document.querySelector(".container");
+
+    signInBtn.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+    });
+
+    signUpBtn.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+    });
+
+    fistForm.addEventListener("submit", (e) => e.preventDefault());
+    secondForm.addEventListener("submit", (e) => e.preventDefault());
+    </script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../script/signup.js"></script>
+</body>
+
+</html>
