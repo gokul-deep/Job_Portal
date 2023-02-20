@@ -96,6 +96,7 @@
                         <?php echo $username; ?>
                     </h4>
                 </div>
+                <a href="#" target="_blank" rel="noopener noreferrer"><button type="button" class="btn btn-success w-100 mt-4">Applied Jobs</button></a>
             </div>
 
             <div class="col-lg-9 md-12 right-side ms-auto px-5">
@@ -155,8 +156,28 @@
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex flex-column align-items-center justify-content-center">
-                                <button type="button" class="btn btn-request my-3" onclick="applyJobs(<?php echo $row['sn'] ?>,<?php echo $userId ?>)"> Apply Now </button>
+                                <button type="button" class="btn btn-request my-3" data-bs-toggle="modal" data-bs-target="#applyModal" onclick="applyJobs(<?php echo $row['sn'] ?>,<?php echo $userId ?>)"> Apply Now </button>
                             </div>
+
+                            <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered ">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="applyModalLabel"><b>Job Applied Successfully !</b></h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body fs-5">
+                                            <p>Jobs with similar skills found !!</p>
+                                            <p>Apply all similar Jobs??</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Apply All</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
                         </div>
                     </div>
                     <?php } ?>
